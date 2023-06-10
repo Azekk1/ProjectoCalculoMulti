@@ -161,7 +161,7 @@ NuevoEstaciones = Estaciones.T * Estaciones
 NuevoM12 = Estaciones.T * M12
 EstacionesM12Final = NuevoEstaciones.inv()
 RadiacionM12 = EstacionesM12Final * NuevoM12
-print(RadiacionM12)
+print(f"la temperatura a las 12 es {RadiacionM12}")
 
 NuevoEstaciones = Estaciones.T * Estaciones
 NuevoM13 = Estaciones.T * M13
@@ -235,12 +235,12 @@ EstacionesM24Final = NuevoEstaciones.inv()
 RadiacionM24 = EstacionesM24Final * NuevoM24
 print(RadiacionM24)
 
-def T(x, y):
-    resultado = ((-0.0456597009818154 * (x ** 3)) + (0.0262485355269537 * (y ** 3)) + (0.0363564134088055 * (
-            x ** 2) * y) +( 0.0606514483995948 * x * (y ** 2) )+ (0.605800058068652 * (x ** 2)) +
-                 (-0.661865902860981 * (y ** 2)) + (-1.03958768553562 * x * y) + (-0.650390530241907 * x) + (
-                             5.60973371458613 * y + -6.43629895307708))
+def R(x, y):
+    resultado = ((-2.31027939033521 * (x ** 3)) + (1.36482656572787 * (y ** 3)) + (2.58594297267661 * (
+            x ** 2) * y) +( 0.217498187061778 * x * (y ** 2) )+ (28.1083524480346 * (x ** 2)) +
+                 (-16.1548399689464 * (y ** 2)) + (-23.4735123185110 * x * y) + (-96.7826181598430 * x) + (
+                             84.9863452703576 * y + 184.652642106492))
     return resultado
 
 
-print(T(1.84,7.47))
+print(f"La radiación en el punto es: {R(4,8)}")
