@@ -161,7 +161,7 @@ NuevoEstaciones = Estaciones.T * Estaciones
 NuevoM12 = Estaciones.T * M12
 EstacionesM12Final = NuevoEstaciones.inv()
 RadiacionM12 = EstacionesM12Final * NuevoM12
-print(f"la temperatura a las 12 es {RadiacionM12}")
+print(f"Los coeficientes de radiación a las 12 es {RadiacionM12}")
 
 NuevoEstaciones = Estaciones.T * Estaciones
 NuevoM13 = Estaciones.T * M13
