@@ -144,103 +144,99 @@ M22 = Matrix([[75.5],[79.3],[37.6],[22.1],[26.8],[90.6],[66.8],[69.9],[62.5],[75
 M23 = Matrix([[0.0],[0.0],[0.0],[0.0],[0.0],[0.0],[0.0],[0.0],[0.0],[0.0],[0.0],[0.0],[0.0],[0.0],[0.0],[0.0],[0.0],[0.0],[0.0],[0.0],[0.0],[0.0], [0.0]])
 M24 = Matrix([[0.0],[0.0],[0.0],[0.0],[0.0],[0.0],[0.0],[0.0],[0.0],[0.0],[0.0],[0.0],[0.0],[0.0],[0.0],[0.0],[0.0],[0.0],[0.0],[0.0],[0.0],[0.0], [0.0]])
 
-NuevoEstaciones = Estaciones.T * Estaciones
-NuevoM00 = Estaciones.T * M00
-EstacionesM00Final = NuevoEstaciones.inv()
-RadiacionM00 = EstacionesM00Final * NuevoM00
-print(RadiacionM00)
 #Desde las 00:00 hasta las 10:00 no existe radiacion en ninguna estaciones por lo cual el resultado siempre dara 0
 
 NuevoEstaciones = Estaciones.T * Estaciones
 NuevoM11 = Estaciones.T * M11
 EstacionesM11Final = NuevoEstaciones.inv()
 RadiacionM11 = EstacionesM11Final * NuevoM11
-print(RadiacionM11)
+print("Los coeficientes de radiación a las 11:00 es",RadiacionM11)
 
 NuevoEstaciones = Estaciones.T * Estaciones
 NuevoM12 = Estaciones.T * M12
 EstacionesM12Final = NuevoEstaciones.inv()
 RadiacionM12 = EstacionesM12Final * NuevoM12
-print(f"Los coeficientes de radiación a las 12 es {RadiacionM12}")
+print(f"Los coeficientes de radiación a las 12:00 es {RadiacionM12}")
 
 NuevoEstaciones = Estaciones.T * Estaciones
 NuevoM13 = Estaciones.T * M13
 EstacionesM13Final = NuevoEstaciones.inv()
 RadiacionM13 = EstacionesM11Final * NuevoM13
-print(RadiacionM13)
+print("Los coeficientes de radiación a las 13:00 es",RadiacionM13)
 
 NuevoEstaciones = Estaciones.T * Estaciones
 NuevoM14 = Estaciones.T * M14
 EstacionesM14Final = NuevoEstaciones.inv()
 RadiacionM14 = EstacionesM14Final * NuevoM14
-print(RadiacionM14)
+print("Los coeficientes de radiación a las 14:00 es",RadiacionM14)
 
 NuevoEstaciones = Estaciones.T * Estaciones
 NuevoM15 = Estaciones.T * M15
 EstacionesM15Final = NuevoEstaciones.inv()
 RadiacionM15 = EstacionesM15Final * NuevoM15
-print(RadiacionM15)
+print("Los coeficientes de radiación a las 15:00 es",RadiacionM15)
 
 NuevoEstaciones = Estaciones.T * Estaciones
 NuevoM16 = Estaciones.T * M16
 EstacionesM16Final = NuevoEstaciones.inv()
 RadiacionM16 = EstacionesM16Final * NuevoM16
-print(RadiacionM16)
+print("Los coeficientes de radiación a las 16:00 es",RadiacionM16)
 
 NuevoEstaciones = Estaciones.T * Estaciones
 NuevoM17 = Estaciones.T * M17
 EstacionesM17Final = NuevoEstaciones.inv()
 RadiacionM17 = EstacionesM17Final * NuevoM17
-print(RadiacionM17)
+print("Los coeficientes de radiación a las 17:00 es",RadiacionM17)
 
 NuevoEstaciones = Estaciones.T * Estaciones
 NuevoM18 = Estaciones.T * M18
 EstacionesM18Final = NuevoEstaciones.inv()
 RadiacionM18 = EstacionesM18Final * NuevoM18
-print(RadiacionM18)
+print("Los coeficientes de radiación a las 18:00 es",RadiacionM18)
 
 NuevoEstaciones = Estaciones.T * Estaciones
 NuevoM19 = Estaciones.T * M19
 EstacionesM19Final = NuevoEstaciones.inv()
 RadiacionM19 = EstacionesM19Final * NuevoM19
-print(RadiacionM19)
+print("Los coeficientes de radiación a las 19:00 es",RadiacionM19)
 
 NuevoEstaciones = Estaciones.T * Estaciones
 NuevoM20 = Estaciones.T * M20
 EstacionesM20Final = NuevoEstaciones.inv()
 RadiacionM20 = EstacionesM20Final * NuevoM20
-print(RadiacionM20)
+print("Los coeficientes de radiación a las 20:00 es",RadiacionM20)
 
 NuevoEstaciones = Estaciones.T * Estaciones
 NuevoM21 = Estaciones.T * M21
 EstacionesM21Final = NuevoEstaciones.inv()
 RadiacionM21 = EstacionesM21Final * NuevoM21
-print(RadiacionM21)
+print("Los coeficientes de radiación a las 21:00 es",RadiacionM21)
 
 NuevoEstaciones = Estaciones.T * Estaciones
 NuevoM22 = Estaciones.T * M22
 EstacionesM22Final = NuevoEstaciones.inv()
 RadiacionM22 = EstacionesM22Final * NuevoM22
-print(RadiacionM22)
+print("Los coeficientes de radiación a las 22:00 es",RadiacionM22)
 
 NuevoEstaciones = Estaciones.T * Estaciones
 NuevoM23 = Estaciones.T * M23
 EstacionesM23Final = NuevoEstaciones.inv()
 RadiacionM23 = EstacionesM23Final * NuevoM23
-print(RadiacionM23)
+print("Los coeficientes de radiación a las 23:00 es",RadiacionM23)
 
 NuevoEstaciones = Estaciones.T * Estaciones
 NuevoM24 = Estaciones.T * M24
 EstacionesM24Final = NuevoEstaciones.inv()
 RadiacionM24 = EstacionesM24Final * NuevoM24
-print(RadiacionM24)
-
+print("Los coeficientes de radiación a las 24:00 es",RadiacionM24)
+__all__ = [f'RadiacionM{i}' for i in range(11, 25)]
 def R(x, y):
-    resultado = ((-2.31027939033521 * (x ** 3)) + (1.36482656572787 * (y ** 3)) + (2.58594297267661 * (
-            x ** 2) * y) +( 0.217498187061778 * x * (y ** 2) )+ (28.1083524480346 * (x ** 2)) +
-                 (-16.1548399689464 * (y ** 2)) + (-23.4735123185110 * x * y) + (-96.7826181598430 * x) + (
-                             84.9863452703576 * y + 184.652642106492))
+    resultado = ((RadiacionM11[0] * (x ** 3)) + (RadiacionM11[1] * (y ** 3)) + (RadiacionM11[2] * (
+            x ** 2) * y) +( RadiacionM11[3] * x * (y ** 2) )+ (RadiacionM11[4] * (x ** 2)) +
+                 (RadiacionM11[5] * (y ** 2)) + (RadiacionM11[6] * x * y) + (RadiacionM11[7] * x) + (
+                             RadiacionM11[8] * y + RadiacionM11[9]))
     return resultado
 
 
 print(f"La radiación en el punto es: {R(4,8)}")
+
