@@ -6,5 +6,5 @@ def T(x, y):
     return resultado
 
 
-print(T(3.56,7.03))
+print(T(6.49,8))
 

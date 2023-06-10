@@ -14,17 +14,23 @@ def func(x):
 
 punto1 = [2.14,6.32]
 punto2= [1.64,5.44]
-punto3 =
-punto4 =
-grad = nd.Gradient(func)([6.49,9.8])
-grad2 =nd.Gradient(func)([10,2.78])
 calculox = punto1[0]-punto2[0]
 calculoy = punto1[1]-punto2[1]
-print(f"{calculox} y {calculoy}")
+grad = nd.Gradient(func)([6.49,2.78])
 grad4 = nd.Gradient(func)([5.89,1.13])
 vector = [calculox, calculoy]
+vector2 = [0, 7.02]
+vector3 = [3.51,0]
+normav3 = math.sqrt((vector3[0])**2+(vector3[1])**2)
+normav2 = math.sqrt((vector2[0])**2+(vector2[1])**2)
 normav = math.sqrt((calculox)**2+(calculoy)**2)
 vectoru = [calculox/normav, calculoy/normav]
+vectoru2 = [vector2[0]/normav2, vector2[1]/normav2]
+vectoru3 = [vector3[0]/normav3, vector3[1]/normav3]
+multgradvec2 = grad*vectoru2
+multgradvec3 = grad*vectoru3
+sumadir2 = multgradvec2[0]+multgradvec2[1]
+sumadir3 = multgradvec3[0]+multgradvec3[1]
 grad5 = nd.Gradient(func)([1.64,5.44])
 multgradvec = grad5*vectoru
 sumadir = multgradvec[0]+multgradvec[1]
@@ -40,9 +46,9 @@ soluciones = solve([Eq(df_dx, 0), Eq(df_dy, 0)], (x, y))
 for solucion in soluciones:
     print(f"Punto estacionario: x = {solucion[0]}, y = {solucion[1]}")
 
-print(f"La derivada direccional en dirección norte es {}")
+print(f"La derivada direccional en dirección norte es {sumadir2}")
 
-print(f"La derivada direccional en dirección este es {}")
+print(f"La derivada direccional en dirección este es {sumadir3}")
 
 print(f"La derivada direccional de Rodelillo en dirección a Viña es {sumadir}")
 
